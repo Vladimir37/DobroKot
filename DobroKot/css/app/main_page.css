@@ -1,0 +1,12 @@
+﻿.board-block {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+    background: #F0E0D6;
+    color: #600000;
+}

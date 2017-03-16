@@ -1,0 +1,13 @@
+﻿body {
+    padding: 5px;
+    background: #FFFFEE;
+    color: #600000;
+}
+
+.pages {
+    display: none;
+}
+
+.page-show {
+    display: block;
+}

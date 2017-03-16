@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DobroKot</title>
+
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.theme-light.css or ui-themed.theme-dark.css 
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- DobroKot references -->
+    <!--<link href="/css/default.css" rel="stylesheet" /> -->
+    <script src="/js/default.js"></script> 
+
+    <!-- Libs -->
+    <script src="/js/jquery.js"></script> 
+
+    <!-- Custom CSS -->
+    <link href="/css/app/base.css" rel="stylesheet" />
+    <link href="/css/app/main_page.css" rel="stylesheet" />
+
+    <!-- Custom JS -->
+    <script src="/js/app/core.js"></script>
+    <script src="/js/app/main_page.js"></script>
+</head>
+<body class="phone">
+    <div id="load-page" class="pages">
+        <img src="/images/big-loading-gif.gif" alt="Loading" />
+    </div>
+    <div id="main-page" class="pages page-show">
+        <h1>DobroKot</h1>
+        <div id="main-page-content"></div>
+    </div>
+</body>
+</html>
