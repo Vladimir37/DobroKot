@@ -49,6 +49,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\app\base.css" />
+    <Content Include="css\app\board.css" />
+    <Content Include="css\app\load.css" />
     <Content Include="css\app\main_page.css" />
     <Content Include="default.html" />
     <Content Include="images\big-loading-gif.gif" />
@@ -58,6 +60,7 @@
     <Content Include="images\Square71x71Logo.scale-240.png" />
     <Content Include="images\SplashScreen.scale-240.png" />
     <Content Include="images\StoreLogo.scale-240.png" />
+    <Content Include="js\app\board_page.js" />
     <Content Include="js\app\core.js" />
     <Content Include="js\app\main_page.js" />
     <Content Include="js\default.js" />

@@ -17,7 +17,7 @@
     // Actions
 
     openBoard: function() {
-        Core.openBoard($(this).data('name'));
+        Core.openBoardIndex($(this).data('name'));
     },
 
     Start: function () {
