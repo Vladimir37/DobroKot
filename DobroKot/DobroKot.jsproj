@@ -52,6 +52,7 @@
     <Content Include="css\app\board_page.css" />
     <Content Include="css\app\load.css" />
     <Content Include="css\app\main_page.css" />
+    <Content Include="css\app\thread_page.css" />
     <Content Include="default.html" />
     <Content Include="images\big-loading-gif.gif" />
     <Content Include="images\Square150x150Logo.scale-240.png" />
@@ -63,6 +64,7 @@
     <Content Include="js\app\board_page.js" />
     <Content Include="js\app\core.js" />
     <Content Include="js\app\main_page.js" />
+    <Content Include="js\app\thread_page.js" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="css\ui-themed.css" />

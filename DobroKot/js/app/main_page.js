@@ -23,6 +23,8 @@
     Start: function () {
         $('#main-page-content').html(this.generatePage());
         $('.js-board-block').click(this.openBoard);
+
+        BoardPage.Init();
     }
 };
 

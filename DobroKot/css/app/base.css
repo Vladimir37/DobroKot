@@ -15,7 +15,13 @@
 
 #board-page-content, #main-page-content {
     padding-top: 10px;
-    padding-bottom: 15px;
+}
+
+.app-button {
+    padding: 5px 10px;
+    background: none;
+    border: 2px solid black;
+    color: black;
 }
 
 .clearfix {

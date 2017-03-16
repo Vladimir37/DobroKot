@@ -19,6 +19,7 @@
             success: function (response) {
                 self.board = name;
                 self.list.threads = response.boards[name].threads;
+                BoardPage.currentPage = 0;
                 BoardPage.renderPage();
                 self.showPage('board');
             },
@@ -39,6 +40,8 @@
             success: function (response) {
                 self.board = name;
                 self.list.threads = response.boards[name].threads;
+                BoardPage.renderPage();
+                self.showPage('board');
             },
             error: function (err) {
                 console.log(err);

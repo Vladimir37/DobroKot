@@ -1,6 +1,18 @@
 ﻿var BoardPage = {
     currentPage: 0,
 
+    previousPage: function () {
+        this.currentPage--;
+        console.log(this.currentPage);
+        Core.openBoardPage(Core.board, this.currentPage);
+    },
+
+    nextPage: function () {
+        this.currentPage++;
+        console.log(this.currentPage);
+        Core.openBoardPage(Core.board, this.currentPage);
+    },
+
     renderPage: function () {
         var threadsHTML = Core.list.threads.map(function (thread) {
             var firstPost = thread.posts[0].message;
@@ -23,6 +35,22 @@
                 '</div>' +
             '</div>');
         });
+
         $('#board-page-content').html(threadsHTML.join(''));
+        $('.board-name').text('/' + Core.board + '/ Страница ' + this.currentPage);
+
+        if (!this.currentPage) {
+            $('.js-prev-but').hide();
+        } else {
+            $('.js-prev-but').show();
+        }
+    },
+
+    Init: function () {
+        this.previousPage = this.previousPage.bind(this);
+        this.nextPage = this.nextPage.bind(this);
+
+        $('.js-prev-but').click(this.previousPage);
+        $('.js-next-but').click(this.nextPage);
     }
 };
