@@ -16,9 +16,11 @@
         $.ajax({
             type: 'GET',
             url: 'http://dobrochan.com/' + name + '/index.json',
-            success: function (res) {
+            success: function (response) {
                 self.board = name;
                 self.list.threads = response.boards[name].threads;
+                BoardPage.renderPage();
+                self.showPage('board');
             },
             error: function (err) {
                 console.log(err);
@@ -34,7 +36,7 @@
         $.ajax({
             type: 'GET',
             url: 'http://dobrochan.com/' + name + '/' + num + '.json',
-            success: function (res) {
+            success: function (response) {
                 self.board = name;
                 self.list.threads = response.boards[name].threads;
             },

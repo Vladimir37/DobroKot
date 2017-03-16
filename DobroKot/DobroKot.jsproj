@@ -49,7 +49,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\app\base.css" />
-    <Content Include="css\app\board.css" />
+    <Content Include="css\app\board_page.css" />
     <Content Include="css\app\load.css" />
     <Content Include="css\app\main_page.css" />
     <Content Include="default.html" />

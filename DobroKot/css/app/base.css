@@ -1,5 +1,6 @@
 ﻿body {
-    padding: 5px;
+    padding: 0 20px;
+    overflow-y: scroll;
     background: #FFFFEE;
     color: #600000;
 }
@@ -10,4 +11,13 @@
 
 .page-show {
     display: block;
+}
+
+#board-page-content, #main-page-content {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.clearfix {
+    clear: both;
 }

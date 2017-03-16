@@ -1,0 +1,45 @@
+﻿.thread-block {
+    width: 90%;
+    background: #F0E0D6;
+    margin-bottom: 30px;
+}
+
+.thread-block .thread-top-panel {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: right;
+    background: grey;
+}
+
+.thread-block .thread-bottom-panel {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    background: grey;
+}
+
+.thread-block .thread-thumb {
+    float: left;
+    width: 25%;
+}
+
+.thread-block .thread-thumb img {
+    width: 100%;
+    max-height: 100px;
+}
+
+.thread-block .thread-text {
+    float: right;
+    width: 70%;
+}
+
+.thread-block .thread-title {
+    color: #600000;
+    font-size: 18px;
+}
+
+.thread-block .thread-post {
+    font-size: 16px;
+}
