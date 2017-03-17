@@ -44,7 +44,7 @@
             },
             error: function (err) {
                 console.log(err);
-                self.createError('Error loading threads!');
+                self.createError('При загрузке тредов произошла ошибка');
                 self.showPage('main');
             }
         });
@@ -59,7 +59,6 @@
             dataType: 'json',
             success: function (response) {
                 self.thread = num;
-                console.log(response.boards[Core.board].threads[0].posts);
                 self.list.posts = response.boards[Core.board].threads[0].posts;
                 ThreadPage.renderPage();
                 self.showPage('thread');
@@ -67,8 +66,8 @@
             error: function (err) {
                 console.log('http://dobrochan.com/' + self.board + '/res/' + num + '.json');
                 console.log(err);
-                self.createError('Error loading posts!');
-                self.showPage('main');
+                self.createError('Ошибка: тред не существует или заблокирован для вашего местоположения');
+                self.showPage('board');
             }
         });
     },

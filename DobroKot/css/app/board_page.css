@@ -12,6 +12,10 @@
     background: grey;
 }
 
+.thread-block .thread-date {
+    float: left;
+}
+
 .thread-block .thread-bottom-panel {
     width: 100%;
     padding: 5px;

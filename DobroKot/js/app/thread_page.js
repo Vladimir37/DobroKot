@@ -3,9 +3,11 @@
         var imgs = post.files.map(function (file) {
             return '<img src="http://dobrochan.com/' + file.thumb + '" alt="post-pic" class="post-pic" />';
         });
+        post.message = post.message.replace(/</g, '&lt;');
         return ('<div class="post-block">' +
             '<div class="post-top-panel">' +
                 '<span class="post-abs-num">#' + post.display_id + '</span>' +
+                '<span class="post-date">' + post.date + '</span>' +
                 '<span class="post-rel-num">№' + index + '</span>' +
             '</div>' +
             '<div class="post-imgs">' + imgs.join('') + '<div class="clearfix"></div></div>' +

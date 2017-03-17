@@ -13,11 +13,15 @@
 }
 
 .post-block .post-abs-num {
-    text-align: left;
+    float: left;
 }
 
 .post-block .post-rel-num {
     text-align: right;
+}
+
+.post-block .post-date {
+    margin-right: 20px;
 }
 
 .post-block .post-imgs {
@@ -35,4 +39,5 @@
     max-height: 100px;
     float: left;
     margin-right: 10px;
+    margin-bottom: 10px;
 }

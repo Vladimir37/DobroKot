@@ -21,12 +21,19 @@
         if (firstPost.length > 50) {
             firstPost = firstPost.slice(0, 50) + '...';
         }
+        firstPost = firstPost.replace(/</g, '&lt;');
+
+        var OpPic = '';
+        if (thread.posts[0].files[0]) {
+            OpPic = '<img src="http://dobrochan.com/' + thread.posts[0].files[0].thumb + '" alt="OP-image" />';
+        }
 
         return ('<div class="thread-block" data-thread="' + thread.display_id + '">' +
-            '<div class="thread-top-panel">#' + thread.display_id + '</div>' +
-            '<div class="thread-thumb">' +
-                '<img src="http://dobrochan.com/' + thread.posts[0].files[0].thumb + '" alt="OP-image" />' +
+            '<div class="thread-top-panel">' +
+                '<div class="thread-date">' + thread.posts[0].date + '</div>' +
+                '<div class="thread-num">#' + thread.display_id + '</div>' +
             '</div>' +
+            '<div class="thread-thumb">' + OpPic + '</div>' +
             '<div class="thread-text">' +
                 '<h2 class="thread-title">' + thread.title + '</h2>' +
                 '<p class="thread-post">' + firstPost + '</p>' +
