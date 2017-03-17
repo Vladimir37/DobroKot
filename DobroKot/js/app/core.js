@@ -17,6 +17,7 @@
             url: 'http://dobrochan.com/' + name + '/index.json',
             success: function (response) {
                 self.board = name;
+                self.active = 'board';
                 self.list.threads = response.boards[name].threads;
                 BoardPage.currentPage = 0;
                 BoardPage.renderPage();
@@ -38,6 +39,7 @@
             url: 'http://dobrochan.com/' + name + '/' + num + '.json',
             success: function (response) {
                 self.board = name;
+                self.active = 'board';
                 self.list.threads = response.boards[name].threads;
                 BoardPage.renderPage();
                 self.showPage('board');
@@ -59,6 +61,7 @@
             dataType: 'json',
             success: function (response) {
                 self.thread = num;
+                self.active = 'thread';
                 self.list.posts = response.boards[Core.board].threads[0].posts;
                 ThreadPage.renderPage();
                 self.showPage('thread');

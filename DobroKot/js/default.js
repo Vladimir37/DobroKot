@@ -28,5 +28,20 @@
         // args.setPromise().
     };
 
+    app.onbackclick = function (evt) {
+        switch (Core.active) {
+            case 'board':
+                Core.active = 'main';
+                Core.showPage('main');
+                return true;
+            case 'thread':
+                Core.active = 'board';
+                Core.showPage('board');
+                return true
+            default:
+                return false;
+        }
+    }
+
     app.start();
 })();
