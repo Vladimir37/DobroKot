@@ -3,7 +3,6 @@
     active: 'main',
     board: null,
     thread: null,
-    loading: false,
     list: {
         threads: [],
         posts: []
@@ -46,6 +45,29 @@
             error: function (err) {
                 console.log(err);
                 self.createError('Error loading threads!');
+                self.showPage('main');
+            }
+        });
+    },
+
+    openThread: function (num) {
+        var self = this;
+        self.showPage('load');
+        $.ajax({
+            type: 'GET',
+            url: 'http://dobrochan.com/' + self.board + '/res/' + num + '.json',
+            dataType: 'json',
+            success: function (response) {
+                self.thread = num;
+                console.log(response.boards[Core.board].threads[0].posts);
+                self.list.posts = response.boards[Core.board].threads[0].posts;
+                ThreadPage.renderPage();
+                self.showPage('thread');
+            },
+            error: function (err) {
+                console.log('http://dobrochan.com/' + self.board + '/res/' + num + '.json');
+                console.log(err);
+                self.createError('Error loading posts!');
                 self.showPage('main');
             }
         });

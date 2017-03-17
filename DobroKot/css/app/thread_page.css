@@ -1,2 +1,38 @@
-﻿body {
+﻿.post-block {
+    width: 90%;
+    background: #F0E0D6;
+    margin-bottom: 30px;
+}
+
+.post-block .post-top-panel {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: right;
+    background: grey;
+}
+
+.post-block .post-abs-num {
+    text-align: left;
+}
+
+.post-block .post-rel-num {
+    text-align: right;
+}
+
+.post-block .post-imgs {
+    width: 100%;
+    padding: 5px;
+}
+
+.post-block .post-text {
+    padding: 5px;
+    overflow-x: auto;
+}
+
+.post-block .post-pic {
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+    margin-right: 10px;
 }

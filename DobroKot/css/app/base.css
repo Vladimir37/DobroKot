@@ -13,7 +13,7 @@
     display: block;
 }
 
-#board-page-content, #main-page-content {
+#board-page-content, #main-page-content, #thread-page-content {
     padding-top: 10px;
 }
 
