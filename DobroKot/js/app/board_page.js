@@ -21,7 +21,7 @@
         if (firstPost.length > 50) {
             firstPost = firstPost.slice(0, 50) + '...';
         }
-        firstPost = firstPost.replace(/</g, '&lt;');
+        firstPost = Core.textRenderProcessing(firstPost);
 
         var OpPic = '';
         if (thread.posts[0].files[0]) {

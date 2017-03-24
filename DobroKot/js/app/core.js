@@ -60,6 +60,7 @@
             url: 'http://dobrochan.com/' + self.board + '/res/' + num + '.json',
             dataType: 'json',
             success: function (response) {
+                ThreadPage.postList = {};
                 self.thread = num;
                 self.active = 'thread';
                 self.list.posts = response.boards[Core.board].threads[0].posts;
@@ -85,5 +86,20 @@
     showPage: function (pagename) {
         $('.page-show').removeClass('page-show');
         $('#' + pagename + '-page').addClass('page-show');
+    },
+
+    textRenderProcessing: function(text, subject_id) {
+        var fixedText = text.replace(/</g, '&lt;')
+            .replace(/\*\*(.+?)\*\*/g, '<b class="bold">$1</b>')
+            .replace(/\*(.+?)\*/g, '<i class="italic">$1</i>')
+            .replace(/%%(.+?)%%/g, '<span class="spoiler">$1</span>')
+            .replace(/>>([0-9]+)/g, function (full, id, num) {
+                if (ThreadPage.postList[id] && subject_id) {
+                    ThreadPage.postList[id].responses.push(subject_id);
+                }
+                return '<a class="post_link" data-link="' + id + '">>>' + id + '</a>';
+            })
+            .replace(/(^|\n)(>.+?)(\n|$)/gm, '$1<span class="quote">$2</span>$3');
+        return fixedText;
     }
 };

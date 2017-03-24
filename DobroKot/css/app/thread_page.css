@@ -31,6 +31,14 @@
 
 .post-block .post-text {
     padding: 5px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+.post-block .post-responses {
+    padding: 5px;
+    font-size: 12px;
     overflow-x: auto;
 }
 
@@ -40,4 +48,18 @@
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.spoiler {
+    background: grey;
+    color: black;
+}
+
+.quote {
+    color: #789922;
+}
+
+.post-link {
+    text-decoration: underline;
+    color: blue;
 }
