@@ -42,6 +42,15 @@
         });
     },
 
+    viewResponse: function(e) {
+        var target = $(e.currentTarget);
+        var num = target.data('link');
+        var targetPost = $('[data-id=' + num + ']');
+        if (targetPost.length) {
+            Core.openQuote(targetPost[0].outerHTML);
+        }
+    },
+
     renderPage: function () {
         var self = this;
         var posts = Core.list.posts.map(function (post, index) {
@@ -52,5 +61,7 @@
         $('.thread-name').text(Core.list.posts[0].title);
 
         this.generateResponses();
+
+        $('.post_link').click(this.viewResponse);
     }
 };

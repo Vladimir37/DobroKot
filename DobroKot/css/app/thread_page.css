@@ -63,3 +63,15 @@
     text-decoration: underline;
     color: blue;
 }
+
+#quote-page {
+    position: fixed;
+    top: 10px;
+    left: 5%;
+    width: 90%;
+    height: 600px;
+    padding: 5px;
+    background: #FFFFEE;
+    border: 1px solid black;
+    z-index: 10;
+}

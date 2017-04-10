@@ -1,6 +1,7 @@
 ﻿var Core = {
     // State
     active: 'main',
+    quote_opened: false,
     board: null,
     thread: null,
     list: {
@@ -74,6 +75,15 @@
                 self.showPage('board');
             }
         });
+    },
+
+    openQuote: function(post) {
+        if (!this.quote_opened) {
+            this.quote_opened = true;
+            $('#quote-page').addClass('page-show');
+        }
+
+        $('#quote-page').html(post);
     },
 
     // Utility

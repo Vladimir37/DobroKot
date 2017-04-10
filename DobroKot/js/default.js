@@ -29,6 +29,12 @@
     };
 
     app.onbackclick = function (evt) {
+        if (Core.quote_opened) {
+            $('#quote-page').removeClass('page-show');
+            Core.quote_opened = false;
+            return true;
+        }
+
         switch (Core.active) {
             case 'board':
                 Core.active = 'main';
