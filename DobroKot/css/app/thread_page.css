@@ -71,6 +71,8 @@
     width: 90%;
     height: 600px;
     padding: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #FFFFEE;
     border: 1px solid black;
     z-index: 10;

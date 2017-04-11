@@ -84,6 +84,10 @@
         }
 
         $('#quote-page').html(post);
+        $('#quote-page .post-block').css({
+            width: '100%'
+        });
+        $('#quote-page .post_link').click(ThreadPage.viewResponse);
     },
 
     // Utility
