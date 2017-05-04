@@ -1,7 +1,7 @@
 ﻿var Core = {
     // State
     active: 'main',
-    quote_opened: false,
+    modal_opened: false,
     board: null,
     thread: null,
     list: {
@@ -78,8 +78,8 @@
     },
 
     openQuote: function(post) {
-        if (!this.quote_opened) {
-            this.quote_opened = true;
+        if (!this.modal_opened) {
+            this.modal_opened = true;
             $('#quote-page').addClass('page-show');
         }
 
@@ -88,6 +88,16 @@
             width: '100%'
         });
         $('#quote-page .post_link').click(ThreadPage.viewResponse);
+    },
+
+    openImage: function (e) {
+        if (!Core.modal_opened) {
+            Core.modal_opened = true;
+            $('#image-page').addClass('page-show');
+            $('#opened_image').attr({
+                src: 'http://dobrochan.com/' + $(e.currentTarget).data('src')
+            });
+        }
     },
 
     // Utility

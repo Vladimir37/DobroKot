@@ -29,9 +29,11 @@
     };
 
     app.onbackclick = function (evt) {
-        if (Core.quote_opened) {
+        console.log(Core.modal_opened);
+        if (Core.modal_opened) {
             $('#quote-page').removeClass('page-show');
-            Core.quote_opened = false;
+            $('#image-page').removeClass('page-show');
+            Core.modal_opened = false;
             return true;
         }
 

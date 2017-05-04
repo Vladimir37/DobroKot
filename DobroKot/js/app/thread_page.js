@@ -4,7 +4,7 @@
     generatePost: function (post, index) {
         var self = this;
         var imgs = post.files.map(function (file) {
-            return '<img src="http://dobrochan.com/' + file.thumb + '" alt="post-pic" class="post-pic" />';
+            return '<img src="http://dobrochan.com/' + file.thumb + '" data-src="' + file.src + '" alt="post-pic" class="post-pic" />';
         });
         post.message = Core.textRenderProcessing(post.message, post.display_id);
         self.postList[post.display_id] = {
@@ -63,5 +63,7 @@
         this.generateResponses();
 
         $('.post_link').click(this.viewResponse);
+
+        $('.post-pic').click(Core.openImage);
     }
 };

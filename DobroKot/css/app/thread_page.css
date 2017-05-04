@@ -64,7 +64,7 @@
     color: blue;
 }
 
-#quote-page {
+#quote-page, #image-page {
     position: fixed;
     top: 10px;
     left: 5%;
@@ -76,4 +76,9 @@
     background: #FFFFEE;
     border: 1px solid black;
     z-index: 10;
+}
+
+#image-page {
+    overflow-x: auto;
+    overflow-y: auto;
 }
