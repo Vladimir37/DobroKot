@@ -29,12 +29,22 @@
     };
 
     app.onbackclick = function (evt) {
-        console.log(Core.modal_opened);
         if (Core.modal_opened) {
-            $('#quote-page').removeClass('page-show');
-            $('#image-page').removeClass('page-show');
-            Core.modal_opened = false;
-            return true;
+            if (Core.modal_image) {
+                if (Core.modal_quote == false) {
+                    Core.modal_opened = false;
+                }
+                Core.modal_image = false;
+                $('#image-page').removeClass('page-show');
+                return true;
+            }
+
+            if (Core.modal_quote) {
+                Core.modal_opened = false;
+                Core.modal_quote = false;
+                $('#quote-page').removeClass('page-show');
+                return true;
+            }
         }
 
         switch (Core.active) {

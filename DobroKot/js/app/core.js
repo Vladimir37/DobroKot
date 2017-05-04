@@ -2,6 +2,8 @@
     // State
     active: 'main',
     modal_opened: false,
+    modal_quote: false,
+    modal_image: false,
     board: null,
     thread: null,
     list: {
@@ -80,6 +82,7 @@
     openQuote: function(post) {
         if (!this.modal_opened) {
             this.modal_opened = true;
+            this.modal_quote = true;
             $('#quote-page').addClass('page-show');
         }
 
@@ -91,13 +94,12 @@
     },
 
     openImage: function (e) {
-        if (!Core.modal_opened) {
-            Core.modal_opened = true;
-            $('#image-page').addClass('page-show');
-            $('#opened_image').attr({
-                src: 'http://dobrochan.com/' + $(e.currentTarget).data('src')
-            });
-        }
+        Core.modal_opened = true;
+        Core.modal_image = true;
+        $('#image-page').addClass('page-show');
+        $('#opened_image').attr({
+            src: 'http://dobrochan.com/' + $(e.currentTarget).data('src')
+        });
     },
 
     // Utility

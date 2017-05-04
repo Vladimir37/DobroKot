@@ -81,4 +81,5 @@
 #image-page {
     overflow-x: auto;
     overflow-y: auto;
+    z-index: 15;
 }

@@ -64,6 +64,6 @@
 
         $('.post_link').click(this.viewResponse);
 
-        $('.post-pic').click(Core.openImage);
+        $('body').on('click', '.post-pic', Core.openImage);
     }
 };
