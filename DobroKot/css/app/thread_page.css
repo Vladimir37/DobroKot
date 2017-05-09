@@ -64,7 +64,7 @@
     color: blue;
 }
 
-#quote-page, #image-page {
+#quote-page, #image-page, #post-page {
     position: fixed;
     top: 10px;
     left: 5%;
@@ -82,4 +82,13 @@
     overflow-x: auto;
     overflow-y: auto;
     z-index: 15;
+}
+
+.posting_form {
+    border: 2px solid black !important;
+}
+
+.posting_form_textarea {
+    height: 300px;
+    border: 2px solid black;
 }

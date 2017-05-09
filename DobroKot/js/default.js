@@ -39,6 +39,15 @@
                 return true;
             }
 
+            if (Core.modal_posting) {
+                if (Core.modal_quote == false) {
+                    Core.modal_opened = false;
+                }
+                Core.modal_posting = false;
+                $('#post-page').removeClass('page-show');
+                return true;
+            }
+
             if (Core.modal_quote) {
                 Core.modal_opened = false;
                 Core.modal_quote = false;

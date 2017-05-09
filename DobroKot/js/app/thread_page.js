@@ -65,5 +65,7 @@
         $('.post_link').click(this.viewResponse);
 
         $('body').on('click', '.post-pic', Core.openImage);
+
+        $('body').on('click', ".post-abs-num", Core.openPostForm);
     }
 };

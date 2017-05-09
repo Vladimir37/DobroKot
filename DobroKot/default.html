@@ -44,8 +44,8 @@
     <div id="board-page" class="pages">
         <h2 class="board-name"></h2>
         <div id="board-page-content"></div>
-        <button class="app-button pagination-but js-prev-but">Previous page</button>
-        <button class="app-button pagination-but js-next-but">Next page</button>
+        <button class="app-button pagination-but js-prev-but">Предыдущая</button>
+        <button class="app-button pagination-but js-next-but">Следующая</button>
     </div>
 
     <div id="thread-page" class="pages">
@@ -57,6 +57,18 @@
 
     <div id="image-page" class="pages">
         <img src="#" alt="target_image" id="opened_image" />
+    </div>
+
+    <div id="post-page" class="pages">
+        <form id="post-form">
+            <input class="posting_form" type="text" name="subject" value="" />
+            <br />
+            <input class="posting_form" type="text" name="name" value="Анонимус" />
+            <br />
+            <textarea class="posting_form posting_form_textarea" name="message" id="post_form_message"></textarea>
+            <br />
+            <button class="app-button">Отправить</button>
+        </form>
     </div>
 </body>
 </html>

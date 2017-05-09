@@ -4,6 +4,7 @@
     modal_opened: false,
     modal_quote: false,
     modal_image: false,
+    modal_posting: false,
     board: null,
     thread: null,
     list: {
@@ -100,6 +101,15 @@
         $('#opened_image').attr({
             src: 'http://dobrochan.com/' + $(e.currentTarget).data('src')
         });
+    },
+
+    openPostForm: function (e) {
+        Core.modal_opened = true;
+        Core.modal_posting = true;
+        var num = $(e.currentTarget).text().slice(1);
+        $('#post_form_message').val('>>' + num + '\n');
+        $('#post-page').addClass('page-show');
+        $('#post_form_message').focus();
     },
 
     // Utility
